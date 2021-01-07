@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema(
     userImage: {
       type: String,
     },
+    roomName: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

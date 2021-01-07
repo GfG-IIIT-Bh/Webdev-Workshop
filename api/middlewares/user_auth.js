@@ -3,7 +3,7 @@ const verifyJWT = (token) => {
   return new Promise(async (res, rej) => {
     try {
       const payload = await jwt.verify(token, process.env.JWT_SECRET);
-      console.log(payload);
+      // console.log(payload);
       res({
         success: true,
         payload,
