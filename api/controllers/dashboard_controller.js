@@ -39,12 +39,26 @@ const findBatchDetails = (email) => {
     resolve(flag);
   });
 };
+
 const getRoomMembers = async (req, res) => {
   const roomDetails = await findBatchDetails(req.user);
   if (roomDetails.success) {
     const roomName = roomDetails.roomName;
     const roomMembers = await User.find({ roomName });
-    res.send(roomMembers);
+    var roomData = [];
+    let userData;
+    roomMembers.forEach((member) => {
+      const { email, name, userImage } = member;
+      if (email == req.user) {
+        userData = { email, name, userImage };
+      }
+      roomData.push({ email, name, userImage });
+    });
+    res.status(200).json({
+      success: true,
+      data: roomData,
+      user: userData,
+    });
   } else {
     res.status(404).json({
       success: false,

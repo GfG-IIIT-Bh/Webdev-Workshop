@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open sans;
+  font-weight: normal;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+input {
+  width: 100%;
+  opacity: 0.9;
+  -webkit-appearance: none;
+  padding: 10px 15px;
+  margin: 5px 10px;
+  border: 2px solid white;
+  background-color: rgba(114, 175, 127, 0.4);
+  border-radius: 8px;
+  font-size: 15px;
+}
+button {
+  width: 100%;
+  -webkit-appearance: none;
+  padding: 10px 15px;
+  margin: 7px 10px;
+  border: 2px solid white;
+  background-color: rgb(114, 175, 127);
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+input::placeholder {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+input:hover,
+input:focus {
+  background-color: rgba(136, 217, 105, 0.1);
+  opacity: 0.95;
+  border: 2px solid rgb(114, 175, 127);
+  box-sizing: border-box;
+  border-radius: 9.16731px;
+}
+a:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(114, 175, 127);
+  padding: 0 40px 0 40px;
+  align-items: center;
+}
+.header > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin-btn {
+  background-color: rgb(114, 175, 127);
+  border-radius: 6px;
+  border-style: none;
+  padding: 5px 18px;
+  color: white;
+  font-size: 15px;
+  width: auto;
+}
+
+.body-wrapper {
+  position: fixed;
+  top: 50px;
+  height: calc(100% - 50px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+#content-wrapper {
+  width: 25%;
+  margin-top: 30px;
+  display: inherit;
+  align-items: center;
+  flex-direction: column;
+}
+#content-wrapper > div {
+  width: 100%;
+}
+.avatar-container {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50px;
+}
+.avatar-container > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.log-container {
+  height: 20px;
+  visibility: hidden;
+  margin: 10px 0;
+}
+#logs {
+  text-align: center;
+}
+.form-container {
+  padding: 5px;
+}
+.form-container > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#upload-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+#upload-btn-div > label {
+  color: rgb(114, 175, 127);
+  cursor: pointer;
+}

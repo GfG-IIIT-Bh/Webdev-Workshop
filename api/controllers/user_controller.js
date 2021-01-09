@@ -64,7 +64,8 @@ const signin = async (req, res) => {
       if (isMatched) {
         return res.status(200).json({
           success: true,
-          access_token: jwt.sign({ email }, process.env.JWT_SECRET, jwt_opts),
+          token: jwt.sign({ email }, process.env.JWT_SECRET, jwt_opts),
+          message: "Signed in successfully",
         });
       }
 

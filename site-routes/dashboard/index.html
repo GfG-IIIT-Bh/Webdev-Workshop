@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./cdnjs/mustache.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <title>Geeks For Geeks</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/loader.css">
+
+    <link rel="icon" href="./assets/gfg_logo.jpeg">
+    </head>
+    <body>
+        <ul class="header">
+            <li>
+                <img src="./assets/gfg_logo.jpeg" style="height: 35px; width: 35px; border-radius: 50%;">
+                <p style="margin-left: 10px;">Geeks For Geeks IIIT-BH</p>
+            </li>
+            
+            <li>
+                <p id="avatar-name">Welcome!</p>
+                <img src="./assets/avatar.webp" id="avatar">
+            </li>
+            <li id="user-menu">
+                    <div>Logout</div>
+            </li>
+        </ul>
+        <div class="body-wrapper">
+            <section id="members-list">
+
+            </section>
+        </div>
+        <div id="loader">
+            <!-- <div class="loader-small">
+          </div> -->
+            <!-- partial:index.partial.html -->
+            <div class='body'>
+                <span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div class='base'>
+                    <span></span>
+                    <div class='face'></div>
+                </div>
+            </div>
+            <div class='longfazers'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 id="loader-heading">Getting Room Data...</h1>
+            <!-- partial -->
+        </div>
+    <script type="text/html" id="card-template">
+        <div class="card">
+            <div class="card-img-div" style="background:{{color}};">
+                <img src="{{userImage}}">
+            </div>
+            <div class="info-div">
+                <p class="info-p">{{name}}</p>
+                <p class="info-p">{{email}}</p>
+            </div>
+            <div class="option-div">
+                <button class="card-btn"><img class="small-icon" src="./assets/message.png"></button>
+                <button class="card-btn"><img class="small-icon" src="./assets/email.png"></button>
+                <button class="card-btn"><img class="small-icon" src="./assets/info.png"></button>
+            </div>
+        </div>
+    </script>
+    <script src="./effects/effects.js"></script>
+    </body>
+</html>

@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open sans;
+  font-weight: normal;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 70px);
+  width: 100vw;
+  overflow-x: hidden;
+  top: 70px !important;
+  position: fixed;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-style: hidden;
+  background-color: rgba(114, 175, 127, 1);
+  border-radius: 10px;
+  height: 43px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+h1 {
+  position: relative;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#side-div {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#side-div > img {
+  height: 100vh !important;
+  background-color: rgba(114, 175, 127, 1);
+  background-image: url("../assets/noise.svg");
+}
+
+input {
+  padding: 15px;
+  border-style: hidden;
+  width: 100%;
+  height: 50px;
+  color: black;
+  border: 2px solid #ffffff;
+  background: #f5f5f5;
+  opacity: 0.95;
+  border-radius: 9.16731px;
+  -webkit-appearance: none;
+}
+
+input::placeholder {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input:hover,
+input:focus {
+  background-color: rgba(136, 217, 105, 0.1);
+  opacity: 0.95;
+  border: 2px solid rgba(114, 175, 127, 1);
+  box-sizing: border-box;
+  border-radius: 9.16731px;
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+a {
+  color: rgba(114, 175, 127, 1);
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+}
+
+.header {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 13.5px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  z-index: 20;
+  overflow: hidden;
+  height: 70px;
+}
+
+#logo {
+  position: fixed;
+}
+
+#logo img {
+  top: 15px;
+  width: 80px;
+  position: relative;
+  height: 70px;
+}
+
+.login-form-div {
+  width: 50%;
+  background-color: white;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  text-align: center;
+  /* justify-content: center; */
+  position: relative;
+  margin-top: 70px;
+  height: 100%;
+}
+
+.sidebar-image-div {
+  width: 50%;
+  /* background-color:  rgba(114, 175, 127,1); */
+  background-image: url("../assets/noise.svg");
+}
+
+.form-container {
+  text-align: center;
+  justify-content: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  /* margin-top: 70px; */
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.form {
+  /* display: -ms-flexbox; */
+  /* display: -webkit-flex; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  text-align: center;
+  /* justify-content: center; */
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  /* flex-shrink: 0; */
+}
+
+.form > div {
+  margin: 8px;
+}
+
+.form-ele {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.form-ele > div {
+  font-size: 13px;
+}
+
+.checkboximg {
+  display: none;
+}
+
+.remember-me-checkbox {
+  text-align: left;
+  position: relative;
+  top: 12px;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(220, 220, 220, 0.8);
+  border-radius: 4px;
+  padding: 1px;
+  left: 2px;
+  margin-right: 4px;
+}
+
+.rem-me {
+  text-align: left;
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+
+.forgot-pass {
+  text-align: right;
+  position: relative;
+  top: 10px;
+  color: #0266ff;
+  flex-grow: 1;
+}
+
+#is-login-remembered {
+  height: 15px;
+  background-color: #f5f5f5;
+}
+
+#forgot-form {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.message-div {
+  position: relative;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 141.5%;
+  text-align: center;
+  color: rgba(114, 175, 127, 1);
+}
+
+#forgot-form > div {
+  flex-grow: 1;
+  position: relative;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.footer {
+  text-align: center;
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 16px;
+  background-color: white;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+  margin-top: 35px;
+  position: absolute;
+  bottom: 20px;
+}
+
+#footer-forgot {
+  margin-top: 35%;
+}
+
+#forgot-login-div {
+  margin-top: 180px;
+}
+
+#newpassdiv {
+  margin-top: 15vh;
+}
+
+#side-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#side-div svg {
+  width: 100%;
+  height: 50%;
+}
+
+@keyframes spinloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    width: 100%;
+  }
+  #page-container {
+    overflow-y: auto;
+  }
+  .sidebar-image-div {
+    display: none;
+  }
+  .login-form-div {
+    width: 100%;
+    /* height: 80%; */
+  }
+  .form-container,
+  .footer {
+    width: 78%;
+    margin-right: 11%;
+    margin-left: 11%;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  .header {
+    width: 100%;
+  }
+  #page-container {
+    overflow-y: auto;
+  }
+  #side-div {
+    display: none;
+  }
+  .login-form-div {
+    width: 100%;
+    margin-top: 80px;
+  }
+  .form-container {
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  .footer {
+    position: relative;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+    top: 11px;
+    margin-bottom: 10px;
+  }
+  #newpassdiv {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .login-form-div {
+    margin-top: 25px;
+  }
+  #forgot-login-div {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    width: 100%;
+    bottom: 7%;
+  }
+  .sidebar-image-div {
+    display: none;
+  }
+  .login-form-div {
+    width: 100%;
+  }
+  .form-container,
+  .footer {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* position: fixed; */
+    /* margin-top: 10%; */
+  }
+  .form-ele button:hover {
+    opacity: 0.75;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <title>Geeks For Geeks</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="icon" href="./assets/gfg_logo.jpeg">
+    </head>
+    <body>
+        <ul class="header">
+            <li >
+                <img src="./assets/gfg_logo.jpeg" style="height: 35px; width: 35px; border-radius: 50%;">
+                <p style="margin-left: 10px;">Geeks For Geeks IIIT-BH</p>
+            </li>
+            <li>
+                <p style="margin-right: 10px; font-size: 14px;">Already a member?</p>
+                <button id="signin-btn" onclick="location.href='/signin'">Signin</button>
+            </li>
+        </ul>
+        <div class="body-wrapper">
+            <div id="content-wrapper">
+                <div class="avatar-container">
+                    <img id="avatar" src="./assets/avatar.webp">
+                </div>
+                <div class="log-container">
+                    <p id="logs" style="color:  rgb(114, 175, 127);">Logs will be displayed here</p>
+                </div>
+                <h2>Create an account</h2>
+                <div class="form-container">
+                    <form id="signup-form">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" id="name" placeholder="Full Name" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <input type="password" id="re_password" placeholder="Confirm Password" required>
+                        <input type="file" style="display: none;" id="avatar-image" accept="image/*" onchange="readImageFile(this.files)" >
+                        <div id="upload-btn-div">
+                            <label for="avatar-image">Upload Photo</label>
+                        </div>
+                        <button type="submit">REGISTER</button>
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+    <script src="./effects/effects.js"></script>
+    </body>
+</html>

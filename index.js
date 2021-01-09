@@ -9,9 +9,11 @@ const db = require("./config/mongoose");
 
 //bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.json({ extended: true, limit: "10mb" }));
 
 app.use("/api", require("./api/routes"));
+
+app.use(require("./site-routes"));
 
 app.listen(port, (err) => {
   if (err) {
