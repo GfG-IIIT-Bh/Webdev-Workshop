@@ -1,7 +1,7 @@
 const dashboardEndpoint = "/api/dashboard/";
 const cardTemplate = document.getElementById("card-template").innerHTML;
 const instanceAxios = axios.create({
-  timeout: 80000,
+  // timeout: 80000,
 });
 const getToken = (key) => {
   const tokenFromStorage = localStorage.getItem(key);

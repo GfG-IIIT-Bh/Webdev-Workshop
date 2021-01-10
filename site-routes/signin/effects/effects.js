@@ -1,6 +1,6 @@
 const signInEndpoint = "/api/signin";
 const instanceAxios = axios.create({
-  timeout: 8000,
+  // timeout: 8000,
 });
 const reqListener = (method, url, data) => {
   return new Promise((resolve, reject) => {

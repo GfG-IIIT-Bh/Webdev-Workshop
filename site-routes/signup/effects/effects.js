@@ -1,7 +1,7 @@
 var img_base64;
 const signUpEndpoint = "/api/signup";
 const instanceAxios = axios.create({
-  timeout: 10000,
+  // timeout: 10000,
 });
 const reqListener = (method, url, data) => {
   return new Promise((resolve, reject) => {
