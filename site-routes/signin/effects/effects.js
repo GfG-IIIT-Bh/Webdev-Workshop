@@ -62,7 +62,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   if (success && success.success === true) {
     console.log(success);
     document.getElementById("res-mssg").innerText = success.message;
-    setCookie("access_token", success.token, 30); //expires in 30 days
+    setCookie("access_token", success.token, 7); //expires in 30 days
     location.href = "/dashboard";
   } else if (err) {
     document.getElementById("res-mssg").innerText = err.message;

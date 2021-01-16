@@ -2,7 +2,7 @@ const iiitidregex = /^[a-c][1-5][0-9]*$/i;
 const User = require("../models/users");
 const branchData = {
   1: "CSE",
-  2: "EEE",
+  2: "EEE", //change to etc
   3: "ETC",
   4: "IT",
   5: "CE",
